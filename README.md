@@ -1,5 +1,3 @@
-# Receipt Compiler
+# CSS Icons Generator
 
-Combine your receipts into a pdf file.
-
-Web App: [https://receipt-compiler.web.app/](https://receipt-compiler.web.app/)
+Combine svg and png files into single css file.
