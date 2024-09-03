@@ -49,8 +49,8 @@ const svgToCSS = (className, svgText) => {
   let cssText = svgText.replace(/<\!--.*?-->/g, "") // remove comments
   cssText = cssText.replace(/(\r\n|\n|\r)/gm, "") // remove line breaks
   cssText = cssText.replace(/\sversion=".*?"/g, "") // remove version
-  cssText = cssText.replace(/\swidth=".*?"/g, "") // remove width
-  cssText = cssText.replace(/\sheight=".*?"/g, "") // remove height
+  // cssText = cssText.replace(/\swidth=".*?"/g, "") // remove width
+  // cssText = cssText.replace(/\sheight=".*?"/g, "") // remove height
 /*   if (!staticSvg.value) {
     cssText = cssText.replace(/fill=".*?"/g, 'fill="currentColor"') // change fill to currentColor
     cssText = cssText.replace(/stroke=".*?"/g, 'stroke="currentColor"') // change fill to currentColor
