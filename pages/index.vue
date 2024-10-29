@@ -45,14 +45,14 @@ const svgToCSS = (className, svgText) => {
     let cssText  = ''
     if (!staticSvg.value) {
         cssText = `i.icon-${className} {
-      --svg: url("${dataURI}");
-  }`
+    --svg: url("${dataURI}");
+}`
     }
     else {
         cssText = `i.icon-${className} {
     background-color: unset;
     background-image: url("${dataURI}");
-  }`
+}`
     }
 
     return cssText
@@ -62,7 +62,7 @@ const pngToCss = (className, pngText) => {
     return `i.icon-${className} {
     background-color: unset;
     background-image: url("${pngText}");
-  }`
+}`
 }
 
 const readFile = (file, type) => {
@@ -92,19 +92,19 @@ const generateCSS = async (files) => {
     let fileError = false
 
     let cssContent = `i {
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-color: currentColor;
-      -webkit-mask-image: var(--svg);
-      mask-image: var(--svg);
-      -webkit-mask-repeat: no-repeat;
-      mask-repeat: no-repeat;
-      -webkit-mask-size: 100% 100%;
-      mask-size: 100% 100%;
-  }`
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}`
 
     try {
         for (let i = 0; i < files.length; i++) {
@@ -183,6 +183,13 @@ onBeforeUnmount(() => {
 })
 
 const showCodeModal = ref(false)
+onActivated(() => {
+    showCodeModal.value = false
+})
+
+onDeactivated(() => {
+    showCodeModal.value = false
+})
 </script>
 
 <style scoped>
