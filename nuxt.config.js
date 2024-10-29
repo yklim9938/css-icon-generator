@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   app: {
+    keepalive: true,
     head: {
       link: [
         { rel: "icon", hid: "icon", type: "image/png", href: `/favicon-32x32.png` },
@@ -31,6 +32,7 @@ export default defineNuxtConfig({
   ],
   css: [
     `~/assets/css/variables.css`,
+    `~/assets/css/icons.css`,
     `~/assets/css/main.css`,
   ],
   postcss: {
