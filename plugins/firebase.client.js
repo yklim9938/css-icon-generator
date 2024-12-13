@@ -1,8 +1,8 @@
-import { initializeApp } from "firebase/app";
+// import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
 
 export default defineNuxtPlugin(nuxtApp => {
-    nuxtApp.hook('app:mounted', () => {
+    /* nuxtApp.hook('app:mounted', () => {
         const firebaseConfig = {
             apiKey: "AIzaSyAPK9tC7VvuuhhoSrEVGVSS7C8OLejxKSg",
             authDomain: "css-icon-generator.firebaseapp.com",
@@ -15,5 +15,5 @@ export default defineNuxtPlugin(nuxtApp => {
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         // const analytics = getAnalytics(app);
-    })
+    }) */
 })

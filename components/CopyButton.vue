@@ -1,5 +1,6 @@
 <template>
-     <button @click="copyCode" class="text-sm bg-primary py-2 px-4 w-full text-white disabled:opacity-40" :disabled="disabled">
+     <!-- <button @click="copyCode" class="text-sm bg-primary py-2 px-4 w-full text-white disabled:opacity-40" :disabled="disabled"> -->
+     <button @click="copyCode" :disabled="disabled">
         <slot v-if="!copying" />
         <span v-else>Copied!</span>
     </button>

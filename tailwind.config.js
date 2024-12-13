@@ -1,34 +1,19 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./components/**/*.{js,vue,ts}",
-    "./layouts/**/*.vue",
-    "./pages/**/*.vue",
-    "./plugins/**/*.{js,ts}",
-    "./nuxt.config.{js,ts}",
-    "./app.vue",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        'content': 'var(--content)',
-        'content-light': 'var(--content-light)',
-        'text': 'var(--text)',
-        'text-light': 'var(--text-light)',
-        'card': 'var(--card)',
-        'primary': 'var(--primary)',
-        'primary-light': 'var(--primary-light)',
-        'secondary': 'var(--secondary)',
-        'secondary-light': 'var(--secondary-light)',
-        'line': 'var(--line)',
-        'danger': 'var(--danger)',
-      },
-      boxShadow: {
-        'container': 'var(--o-shadow)'
-       }
-    },
-  },
-  plugins: [],
-  // darkMode: 'class'
-}
 
+module.exports = {
+    "theme": { "extend": {} },
+    "content": [
+        // all directories and extensions will correspond to your Nuxt config
+        "/components/**/*.{vue,js,jsx,mjs,ts,tsx}",
+        "/layouts/**/*.{vue,js,jsx,mjs,ts,tsx}",
+        "/pages/**/*.{vue,js,jsx,mjs,ts,tsx}",
+        "/plugins/**/*.{js,ts,mjs}",
+        "/composables/**/*.{js,ts,mjs}",
+        "/utils/**/*.{js,ts,mjs}",
+        "/{A,a}pp.{vue,js,jsx,mjs,ts,tsx}",
+        "/{E,e}rror.{vue,js,jsx,mjs,ts,tsx}",
+        "/app.config.{js,ts,mjs}",
+        "/app/spa-loading-template.html"
+    ],
+    "plugins": [require('daisyui'),]
+}
