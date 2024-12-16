@@ -14,6 +14,6 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const currentTab = ref(1)
 </script>

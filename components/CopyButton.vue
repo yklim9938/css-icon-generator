@@ -6,11 +6,12 @@
     </button>
 </template>
 
-<script setup>
-const props = defineProps({
-    textToCopy: String,
-    disabled: Boolean
-})
+<script setup lang="ts">
+interface Props {
+    textToCopy?: string,
+    disabled?: boolean
+}
+const props = defineProps<Props>()
 const copying = ref(false)
 const copyCode = async () => {
     if (!props.textToCopy || copying.value) {

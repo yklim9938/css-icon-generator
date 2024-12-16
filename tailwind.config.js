@@ -15,5 +15,8 @@ module.exports = {
         "/app.config.{js,ts,mjs}",
         "/app/spa-loading-template.html"
     ],
-    "plugins": [require('daisyui'),]
+    "plugins": [
+        require('daisyui'),
+        require('@tailwindcss/typography')
+    ]
 }
