@@ -1,21 +1,19 @@
 <template>
-    <ClientOnly>
-        <div class="relative h-full">
-            <label :for="id" class="fd-container rounded-md" :class="{ active: dropping }" @dragenter="dragIn" @dragover="dragOver"
-                @dragleave="dragOut" @drop="dragOut">
-                <div class="fd-inner-container">
-                    <div class="flex items-center flex-col">
-                        <div class="mt-4 relative flex gap-2">
-                            <i class="icon-svg size-[60px] text-primary -rotate-6 -translate-y-2"></i>
-                            <i class="icon-png size-[60px] text-secondary rotate-6 translate-y-1"></i>
-                        </div>
-                        <div class="text-primary mt-4">Drop your files here</div>
+    <div class="relative h-full">
+        <label :for="id" class="fd-container rounded-md" :class="{ active: dropping }" @dragenter="dragIn" @dragover="dragOver"
+            @dragleave="dragOut" @drop="dragOut">
+            <div class="fd-inner-container">
+                <div class="flex items-center flex-col">
+                    <div class="mt-4 relative flex gap-2">
+                        <i class="icon-svg size-[60px] text-primary -rotate-6 -translate-y-2"></i>
+                        <i class="icon-png size-[60px] text-secondary rotate-6 translate-y-1"></i>
                     </div>
+                    <div class="text-primary mt-4">Drop your files here</div>
                 </div>
-            </label>
-            <input type="file" style="display: none;" :id="id" accept="image/png, image/svg+xml" @change="handleFiles" multiple>
-        </div>
-    </ClientOnly>
+            </div>
+        </label>
+        <input type="file" style="display: none;" :id="id" accept="image/png, image/svg+xml" @change="handleFiles" multiple>
+    </div>
 </template>
 
 <script setup lang="ts">

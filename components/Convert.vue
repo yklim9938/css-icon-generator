@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 class="text-center text-lg font-semibold">Convert svg to Data URI.</h2>
+        <h2 class="text-center text-lg font-semibold">Convert svg code to Data URI</h2>
         <div class="mt-4 mx-auto">
             <textarea v-model="codeInput" class="textarea textarea-primary textarea-xs min-h-[150px] w-full resize-none" placeholder="Paste your svg code here"></textarea>
             <div class="mt-4">
@@ -9,7 +9,7 @@
                         <div v-if="!preview" class="text-xs text-gray-400">Preview</div>
                         <i v-else class="preview-icon size-[150px] cursor-pointer" ref="previewIcon" onclick="this.classList.toggle('color')"></i>
                     </div>
-                    <textarea class="textarea textarea-bordered  textarea-xs !border-accent h-[150px] resize-none w-full" disabled placeholder="Output Data URI will be here">{{ dataURI }}</textarea>
+                    <textarea class="textarea textarea-bordered textarea-xs !border-accent h-[150px] resize-none w-full !cursor-text" disabled placeholder="Output Data URI will be here">{{ dataURI }}</textarea>
                 </div>
                 <div class="grid grid-cols-2 gap-4 mt-4">
                     <CopyButton class="btn btn-primary" :text-to-copy="withUrl" :disabled="!dataURI">Copy with url()</CopyButton>
