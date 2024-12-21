@@ -12,6 +12,18 @@
             </div>
         </div>
     </div>
+    <div>
+        <!--offset bottom -->
+        <div class="h-[40px]"></div>
+        <div class="safe-bottom"></div>
+
+    </div>
+    <div class="fixed bottom-0 left-0 w-full">
+        <div class="p-2 text-center">
+            <a href="https://github.com/yklim9938" target="_blank">Made by <u class="text-primary">yklim</u></a>
+        </div>
+        <div class="safe-bottom"></div>
+    </div>
 </template>
 
 <script setup lang="ts">
